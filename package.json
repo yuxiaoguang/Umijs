@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit-ignore": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^5.0.12",
+    "@types/proj4": "^2.5.0",
+    "@types/react-leaflet": "^2.5.2",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.4",
+    "leaflet": "^1.6.0",
+    "leaflet.chinatmsproviders": "^3.0.2",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "proj4": "^2.6.2",
+    "proj4leaflet": "^1.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-leaflet": "^2.7.0",
+    "umi": "^3.2.4",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "@umijs/preset-ui": "^2.1.14",
+    "compression-webpack-plugin": "^4.0.0",
+    "eslint": "^7.1.0",
+    "eslint-config-alloy": "^3.7.2",
+    "eslint-plugin-react": "^7.20.0",
+    "typescript": "^3.9.3"
+  }
+}
